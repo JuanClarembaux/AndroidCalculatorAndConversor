@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">التطبيق الثاني</string>
+    <string name="bienvenido">اهلا</string>
+    <string name="contraseña">كلمه السر</string>
+    <string name="usuario_et">مستخدم</string>
+</resources>
