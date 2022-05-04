@@ -4,4 +4,10 @@
     <string name="bienvenido">اهلا</string>
     <string name="contraseña">كلمه السر</string>
     <string name="usuario_et">مستخدم</string>
+    <string name="restar_bt">طرح او خصم</string>
+    <string name="sumar_bt">إضافة</string>
+    <string name="resetear_bt">لإعادة تعيين</string>
+    <string name="ocultar_bt">تمويه</string>
+    <string name="convertir_bt">يتحول</string>
+    <string name="reiniciar_bt">اعادة البدء</string>
 </resources>

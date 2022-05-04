@@ -3,4 +3,12 @@
     <string name="bienvenido">Bienvenido</string>
     <string name="usuario_et">Usuario</string>
     <string name="contraseña">Contraseña</string>
+    <string name="sumar_bt">Sumar</string>
+    <string name="restar_bt">Restar</string>
+    <string name="zoomPositivo_bt" translatable="false">Zoom+</string>
+    <string name="zoomNegativo_bt" translatable="false">Zoom-</string>
+    <string name="ocultar_bt">Ocultar</string>
+    <string name="resetear_bt">Resetear</string>
+    <string name="reiniciar_bt">Reiniciar</string>
+    <string name="convertir_bt">Convertir</string>
 </resources>

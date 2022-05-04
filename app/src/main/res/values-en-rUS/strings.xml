@@ -4,4 +4,10 @@
     <string name="bienvenido">Welcome</string>
     <string name="contraseña">Password</string>
     <string name="usuario_et">User</string>
+    <string name="ocultar_bt">Disguise</string>
+    <string name="resetear_bt">Reset</string>
+    <string name="restar_bt">Subtract</string>
+    <string name="sumar_bt">Add</string>
+    <string name="convertir_bt">Convert</string>
+    <string name="reiniciar_bt">Restart</string>
 </resources>
