@@ -9,6 +9,13 @@
     <string name="zoomNegativo_bt" translatable="false">Zoom-</string>
     <string name="ocultar_bt">Ocultar</string>
     <string name="resetear_bt">Resetear</string>
-    <string name="reiniciar_bt">Reiniciar</string>
+    <string name="conversorMonedasText">Conversor de monedas</string>
+    <string name="ingresarMontoPesosText">Ingresar monto en pesos</string>
+    <string name="seleccioneMonedaText">Seleccione una moneda</string>
+    <string name="dolar_eeuu_Text">Dolar (USA)</string>
+    <string name="real_br_Text">Real (Brasil)</string>
+    <string name="euroText">Euro</string>
+    <string name="resultadoText">Resultado</string>
     <string name="convertir_bt">Convertir</string>
+    <string name="reiniciar_bt">Reiniciar</string>
 </resources>

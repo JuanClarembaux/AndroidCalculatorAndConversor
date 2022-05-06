@@ -10,4 +10,11 @@
     <string name="resetear_bt">Réinitialiser</string>
     <string name="convertir_bt">Convertir</string>
     <string name="reiniciar_bt">Redémarrer</string>
+    <string name="conversorMonedasText">Convertisseur de devises</string>
+    <string name="ingresarMontoPesosText">Entrez le montant en pesos</string>
+    <string name="seleccioneMonedaText">Sélectionnez une devise</string>
+    <string name="euroText">Euro</string>
+    <string name="resultadoText">Résultat</string>
+    <string name="real_br_Text">Royale (Brésil)</string>
+    <string name="dolar_eeuu_Text">Dollar (États-Unis)</string>
 </resources>

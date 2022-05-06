@@ -10,4 +10,11 @@
     <string name="sumar_bt">Add</string>
     <string name="convertir_bt">Convert</string>
     <string name="reiniciar_bt">Restart</string>
+    <string name="conversorMonedasText">Currency converter</string>
+    <string name="ingresarMontoPesosText">Enter amount in pesos</string>
+    <string name="seleccioneMonedaText">Select a currency</string>
+    <string name="euroText">Euro</string>
+    <string name="resultadoText">Result</string>
+    <string name="real_br_Text">Royal (Brazil)</string>
+    <string name="dolar_eeuu_Text">Dollar (USA)</string>
 </resources>
