@@ -18,4 +18,5 @@
     <string name="resultadoText">Resultado</string>
     <string name="convertir_bt">Convertir</string>
     <string name="reiniciar_bt">Reiniciar</string>
+    <string name="imagengatito">imagenGatito</string>
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,152 +8,191 @@
     tools:context=".ThirdActivity">
 
     <ImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.02"
         android:id="@+id/gatitoIMG"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:src="@drawable/gatito_img" />
+        android:layout_marginTop="16dp"
+        android:src="@drawable/gatito_img"
+        android:contentDescription="@string/imagengatito" />
 
     <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.35"
+        android:id="@+id/textView"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:textSize="30sp"
         android:text="@string/conversorMonedasText"
-        />
+        android:textSize="30sp"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteY="245dp" />
 
     <EditText
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.45"
         android:id="@+id/ingreseMonto_et"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="5dp"
         android:background="@color/purple_200"
-        android:inputType="number"
         android:hint="@string/ingresarMontoPesosText"
+        android:textAlignment="center"
+        android:importantForAutofill="no"
+        android:inputType="number"
         android:minHeight="48dp"
+        android:textColorHint="#5E35B1"
         android:textSize="20sp"
         tools:ignore="SpeakableTextPresentCheck"
-        />
+        tools:layout_editor_absoluteY="310dp" />
 
     <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.55"
+        android:id="@+id/textView2"
         android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:textSize="20sp"
         android:text="@string/seleccioneMonedaText"
-        />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        >
-        <RadioButton
-            android:id="@+id/dolar_rbt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="0dp"
-            />
-        <TextView
-            android:id="@+id/dolar_tv"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="0dp"
-            android:textSize="20sp"
-            android:text="@string/dolar_eeuu_Text"
-            />
-    </LinearLayout><LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        >
-        <RadioButton
-            android:id="@+id/real_rbt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="0dp"
-            />
-        <TextView
-            android:id="@+id/real_tv"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="0dp"
-            android:textSize="20sp"
-            android:text="@string/real_br_Text"
-            />
-    </LinearLayout><LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        >
-        <RadioButton
-            android:id="@+id/euro_rbt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="0dp"
-            />
-        <TextView
-            android:id="@+id/euro_tv"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="0dp"
-            android:textSize="20sp"
-            android:text="@string/euroText"
-            />
-    </LinearLayout>
+        android:textSize="20sp"
+        tools:layout_editor_absoluteY="382dp" />
 
     <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.615"
+        app:layout_constraintHorizontal_bias="0.65"
+        android:id="@+id/dolar_tv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/dolar_eeuu_Text"
+        android:textSize="20sp"/>
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.685"
+        app:layout_constraintHorizontal_bias="0.65"
+        android:id="@+id/real_tv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/real_br_Text"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteY="483dp" />
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.75"
+        app:layout_constraintHorizontal_bias="0.65"
+        android:id="@+id/euro_tv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/euroText"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteY="529dp" />
+
+    <RadioButton
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.619"
+        app:layout_constraintHorizontal_bias="0.25"
+        android:id="@+id/dolar_rbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+    <RadioButton
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.689"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintBaseline_toTopOf="parent"
+        android:id="@+id/real_rbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+    <RadioButton
+        android:id="@+id/euro_rbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.759"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.86"
         android:id="@+id/resultadoMonto_et"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="15dp"
         android:background="@color/purple_200"
         android:hint="@string/resultadoText"
         android:minHeight="48dp"
         android:textAlignment="center"
+        android:textColorHint="#5E35B1"
         android:textSize="22sp"
-        />
+        tools:layout_editor_absoluteY="590dp" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <Button
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.99"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:id="@+id/convertir_bt"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-
-        >
-        <Button
-            android:id="@+id/convertir_bt"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:textSize="18dp"
-            android:text="@string/convertir_bt"
-            />
-        <Button
-            android:id="@+id/reiniciar_bt"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:textSize="18dp"
-            android:text="@string/reiniciar_bt"
-            />
-    </LinearLayout>
-
-</LinearLayout>
+        android:layout_marginStart="8dp"
+        android:text="@string/convertir_bt"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/reiniciar_bt"/>
+    <Button
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.99"
+        app:layout_constraintHorizontal_bias="0.95"
+        android:id="@+id/reiniciar_bt"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/reiniciar_bt"
+        android:textSize="18sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

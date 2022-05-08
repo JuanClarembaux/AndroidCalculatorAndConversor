@@ -21,7 +21,6 @@
         <activity
             android:name=".SecondActivity"
             android:exported="false">
-
         </activity>
         <activity
             android:name=".MainActivity"
