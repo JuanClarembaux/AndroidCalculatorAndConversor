@@ -9,6 +9,28 @@
         android:roundIcon="@drawable/gatito_img"
         android:supportsRtl="true"
         android:theme="@style/Theme.SegundaApp">
+
+        <!--LOGIN ACTIVITY-->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <!--PRIMERA ACTIVITY-->
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <!--SEGUNDA ACTIVITY-->
         <activity
             android:name=".ThirdActivity"
             android:exported="true">
@@ -18,13 +40,5 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".SecondActivity"
-            android:exported="false">
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"></activity>
     </application>
-
 </manifest>

@@ -115,16 +115,17 @@
         tools:layout_editor_absoluteY="529dp" />
 
     <RadioButton
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.619"
-        app:layout_constraintHorizontal_bias="0.25"
         android:id="@+id/dolar_rbt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.619"
+        tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
     <RadioButton
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
