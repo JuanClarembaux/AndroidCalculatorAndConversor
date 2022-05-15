@@ -18,5 +18,7 @@
     <string name="resultadoText">Resultado</string>
     <string name="convertir_bt">Convertir</string>
     <string name="reiniciar_bt">Reiniciar</string>
-    <string name="imagengatito">imagenGatito</string>
+    <string name="imagengatito" translatable="false">imagenGatito</string>
+    <string name="sumaActivity_bt">Pantalla de suma</string>
+    <string name="ConversorActivity_bt">Conversor de monedas</string>
 </resources>

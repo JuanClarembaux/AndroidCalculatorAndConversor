@@ -17,4 +17,6 @@
     <string name="conversorMonedasText">محول العملات</string>
     <string name="real_br_Text">رويال (البرازيل)</string>
     <string name="dolar_eeuu_Text">دولار (الولايات المتحدة الأمريكية)</string>
+    <string name="sumaActivity_bt">شاشة المجموع</string>
+    <string name="ConversorActivity_bt">محول العملات</string>
 </resources>

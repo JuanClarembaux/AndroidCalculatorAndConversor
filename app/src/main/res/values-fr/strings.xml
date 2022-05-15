@@ -17,4 +17,6 @@
     <string name="resultadoText">Résultat</string>
     <string name="real_br_Text">Royale (Brésil)</string>
     <string name="dolar_eeuu_Text">Dollar (États-Unis)</string>
+    <string name="sumaActivity_bt">Écran de somme</string>
+    <string name="ConversorActivity_bt">Convertisseur de devises</string>
 </resources>

@@ -38,39 +38,35 @@
         tools:layout_editor_absoluteY="245dp" />
 
     <EditText
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.45"
         android:id="@+id/ingreseMonto_et"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:background="@color/purple_200"
         android:hint="@string/ingresarMontoPesosText"
-        android:textAlignment="center"
         android:importantForAutofill="no"
         android:inputType="number"
         android:minHeight="48dp"
+        android:textAlignment="center"
         android:textColorHint="#5E35B1"
         android:textSize="20sp"
-        tools:ignore="SpeakableTextPresentCheck"
-        tools:layout_editor_absoluteY="310dp" />
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.55"
         android:id="@+id/textView2"
         android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="15dp"
         android:text="@string/seleccioneMonedaText"
         android:textSize="20sp"
-        tools:layout_editor_absoluteY="382dp" />
+        app:layout_constraintEnd_toEndOf="@+id/ingreseMonto_et"
+        app:layout_constraintStart_toStartOf="@+id/ingreseMonto_et"
+        app:layout_constraintTop_toBottomOf="@+id/ingreseMonto_et" />
 
     <TextView
         app:layout_constraintTop_toTopOf="parent"
