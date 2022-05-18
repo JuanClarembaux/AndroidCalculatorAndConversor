@@ -5,45 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/teal_700"
     tools:context=".ThirdActivity">
 
     <ImageView
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.02"
+        app:layout_constraintEnd_toEndOf="@id/guiaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+        app:layout_constraintTop_toTopOf="@id/guiaSuperior"
+        app:layout_goneMarginTop="25dp"
         android:id="@+id/gatitoIMG"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/imagengatito"
         android:src="@drawable/gatito_img"
-        android:contentDescription="@string/imagengatito" />
+        />
 
     <TextView
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.35"
         android:id="@+id/textView"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/conversorMonedasText"
-        android:textSize="30sp"
         android:textAlignment="center"
-        tools:layout_editor_absoluteY="245dp" />
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/gatitoIMG"
+        app:layout_constraintStart_toStartOf="@+id/gatitoIMG"
+        app:layout_constraintEnd_toEndOf="@id/gatitoIMG"
+        android:layout_marginTop="25dp"/>
 
     <EditText
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@id/textView"
+        android:layout_marginTop="25dp"
         android:id="@+id/ingreseMonto_et"
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:background="@color/purple_200"
+        android:background="@color/white"
         android:hint="@string/ingresarMontoPesosText"
         android:importantForAutofill="no"
         android:inputType="number"
@@ -51,30 +52,26 @@
         android:textAlignment="center"
         android:textColorHint="#5E35B1"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        />
 
     <TextView
+        app:layout_constraintTop_toBottomOf="@+id/ingreseMonto_et"
+        app:layout_constraintStart_toStartOf="@+id/ingreseMonto_et"
+        app:layout_constraintEnd_toEndOf="@id/ingreseMonto_et"
+        android:layout_marginTop="25dp"
         android:id="@+id/textView2"
         android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
         android:text="@string/seleccioneMonedaText"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/ingreseMonto_et"
-        app:layout_constraintStart_toStartOf="@+id/ingreseMonto_et"
-        app:layout_constraintTop_toBottomOf="@+id/ingreseMonto_et" />
+        android:textSize="20sp" />
 
     <TextView
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.615"
-        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/dolar_rbt"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="5dp"
         android:id="@+id/dolar_tv"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -82,12 +79,10 @@
         android:text="@string/dolar_eeuu_Text"
         android:textSize="20sp"/>
     <TextView
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.685"
-        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintTop_toBottomOf="@+id/dolar_tv"
+        app:layout_constraintStart_toEndOf="@+id/real_rbt"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
         android:id="@+id/real_tv"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -96,12 +91,10 @@
         android:textSize="20sp"
         tools:layout_editor_absoluteY="483dp" />
     <TextView
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.75"
-        app:layout_constraintHorizontal_bias="0.65"
+        app:layout_constraintTop_toBottomOf="@+id/real_tv"
+        app:layout_constraintStart_toEndOf="@+id/euro_rbt"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
         android:id="@+id/euro_tv"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -111,52 +104,45 @@
         tools:layout_editor_absoluteY="529dp" />
 
     <RadioButton
+        app:layout_constraintStart_toEndOf="@id/guiaIzquierda"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/dolar_rbt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.619"
+        android:layout_width="31dp"
+        android:layout_height="42dp"
         tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
+
     <RadioButton
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.689"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guiaIzquierda"
+        app:layout_constraintTop_toBottomOf="@+id/dolar_rbt"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="5dp"
         android:id="@+id/real_rbt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="31dp"
+        android:layout_height="43dp"
         android:layout_gravity="center" />
+
     <RadioButton
+        app:layout_constraintStart_toEndOf="@id/guiaIzquierda"
+        app:layout_constraintTop_toBottomOf="@+id/real_rbt"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="5dp"
         android:id="@+id/euro_rbt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="32dp"
+        android:layout_height="41dp"
         android:layout_gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.759"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.86"
+        app:layout_constraintStart_toStartOf="@id/guiaIzquierda"
+        app:layout_constraintEnd_toEndOf="@id/guiaDerecha"
+        app:layout_constraintBottom_toBottomOf="@id/guiaInferior"
+        android:layout_marginBottom="65dp"
         android:id="@+id/resultadoMonto_et"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:background="@color/purple_200"
+        android:background="@color/white"
         android:hint="@string/resultadoText"
         android:minHeight="48dp"
         android:textAlignment="center"
@@ -165,14 +151,11 @@
         tools:layout_editor_absoluteY="590dp" />
 
     <Button
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.99"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guiaIzquierda"
+        app:layout_constraintBottom_toBottomOf="@id/guiaInferior"
+        android:layout_marginEnd="5dp"
         android:id="@+id/convertir_bt"
-        android:layout_width="180dp"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
@@ -180,16 +163,41 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/reiniciar_bt"/>
     <Button
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.99"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintEnd_toEndOf="@id/guiaDerecha"
+        app:layout_constraintBottom_toBottomOf="@id/guiaInferior"
+        android:layout_marginEnd="5dp"
         android:id="@+id/reiniciar_bt"
-        android:layout_width="180dp"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/reiniciar_bt"
         android:textSize="18sp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaInferior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaSuperior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaIzquierda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaDerecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
 </androidx.constraintlayout.widget.ConstraintLayout>

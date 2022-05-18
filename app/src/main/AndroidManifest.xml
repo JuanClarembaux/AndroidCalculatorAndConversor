@@ -11,6 +11,7 @@
         android:theme="@style/Theme.SegundaApp">
         <activity
             android:name=".MenuActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
 
             <intent-filter>
@@ -46,6 +47,7 @@
         </activity> <!-- SEGUNDA ACTIVITY -->
         <activity
             android:name=".ThirdActivity"
+            android:screenOrientation="portrait"
             android:exported="false">
             <!--
             <intent-filter>

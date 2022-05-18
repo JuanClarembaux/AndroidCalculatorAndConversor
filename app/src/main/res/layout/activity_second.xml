@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/teal_700"
     tools:context=".SecondActivity">
 
     <ImageView
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.15"
+        app:layout_constraintEnd_toStartOf="@+id/guiaDerecha"
+        app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+        app:layout_constraintTop_toTopOf="@+id/guiaSuperior"
+        android:layout_marginTop="40dp"
         android:id="@+id/gatitoIMG"
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -20,106 +20,126 @@
         android:src="@drawable/gatito_img" />
 
     <EditText
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintEnd_toEndOf="@+id/gatitoIMG"
+        app:layout_constraintStart_toStartOf="@+id/gatitoIMG"
+        app:layout_constraintTop_toBottomOf="@+id/gatitoIMG"
+        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:inputType="number"
         android:minWidth="48dp"
         android:text="O"
+        android:textAlignment="center"
         android:textSize="36sp"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        android:background="@color/white"/>
 
 
-        <Button
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.7"
-            app:layout_constraintHorizontal_bias="0.08"
-            android:id="@+id/sumar_bt"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="19dp"
-            android:text="@string/sumar_bt"
-            />
-        <Button
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.7"
-            app:layout_constraintHorizontal_bias="0.92"
-            android:id="@+id/restar_bt"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="19dp"
-            android:text="@string/restar_bt"
-            />
-
-
-        <Button
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.8"
-            app:layout_constraintHorizontal_bias="0.08"
-            android:id="@+id/zoomPositivo_bt"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="19dp"
-            android:text="@string/zoomPositivo_bt"
-            />
-        <Button
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.8"
-            app:layout_constraintHorizontal_bias="0.92"
-            android:id="@+id/zoomNegativo_bt"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="19dp"
-            android:text="@string/zoomNegativo_bt"
-            />
-
-        <Button
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.9"
-            app:layout_constraintHorizontal_bias="0.08"
-            android:id="@+id/resetear_bt"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="19dp"
-            android:text="@string/resetear_bt"
+    <Button
+        android:id="@+id/sumar_bt"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/sumar_bt"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/zoomPositivo_bt"
+        app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="7dp"
         />
-        <Button
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.9"
-            app:layout_constraintHorizontal_bias="0.92"
-            android:id="@+id/ocultar_bt"
-            android:layout_width="180dp"
+
+    <Button
+        android:id="@+id/restar_bt"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/restar_bt"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/zoomNegativo_bt"
+        app:layout_constraintEnd_toStartOf="@+id/guiaDerecha"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="7dp"
+        />
+
+
+    <Button
+        android:id="@+id/zoomPositivo_bt"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/zoomPositivo_bt"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/resetear_bt"
+        app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="7dp"
+        />
+
+    <Button
+        android:id="@+id/zoomNegativo_bt"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/zoomNegativo_bt"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/ocultar_bt"
+        app:layout_constraintEnd_toStartOf="@+id/guiaDerecha"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="7dp"
+        />
+
+    <Button
+        android:id="@+id/resetear_bt"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/resetear_bt"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/guiaInferior"
+        app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="7dp"
+        />
+
+    <Button
+        app:layout_constraintBottom_toTopOf="@+id/guiaInferior"
+        app:layout_constraintEnd_toStartOf="@+id/guiaDerecha"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="7dp"
+        android:id="@+id/ocultar_bt"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/ocultar_bt"
+        android:textSize="18dp"
+        />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guiaInferior"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="19dp"
-            android:text="@string/ocultar_bt"
-            />
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guiaSuperior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guiaIzquierda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guiaDerecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
 </androidx.constraintlayout.widget.ConstraintLayout>

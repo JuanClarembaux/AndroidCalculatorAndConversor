@@ -9,29 +9,33 @@ import android.widget.Button;
 
 public class MenuActivity extends AppCompatActivity {
 
-    Button pantallaDeCalculadora;
-    Button pantallaDeConversor;
+    private Button pantallaDeCalculadora;
+    private Button pantallaDeConversor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        pantallaDeCalculadora=(Button)findViewById(R.id.sumaActivity_bt);
-        pantallaDeConversor=(Button)findViewById(R.id.ConversorActivity_bt);
+        pantallaDeCalculadora=findViewById(R.id.sumaActivity_bt);
+        pantallaDeConversor=findViewById(R.id.ConversorActivity_bt);
+        this.findViews();
+    };
 
+    private void findViews(){
         pantallaDeCalculadora.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MenuActivity.this, SecondActivity.class);
+                Intent i = new Intent(getBaseContext(), SecondActivity.class);
                 startActivity(i);
             }
         });
         pantallaDeConversor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MenuActivity.this, ThirdActivity.class);
+                Intent i = new Intent(getBaseContext(), ThirdActivity.class);
                 startActivity(i);
             }
         });
     }
+
 }
