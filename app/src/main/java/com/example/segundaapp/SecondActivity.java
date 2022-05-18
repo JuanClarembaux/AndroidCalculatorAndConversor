@@ -1,14 +1,13 @@
 package com.example.segundaapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.media.Image;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -34,73 +33,50 @@ public class SecondActivity extends AppCompatActivity {
         this.findViews();
     }
 
+    @SuppressLint("SetTextI18n")
     private void findViews(){
-        activitySecond_sumar_bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                activitySecond_numparaop_et.setText(String.valueOf(sumar(Integer.parseInt(activitySecond_numparaop_et.getText().toString())) + ""));
-            }
+        activitySecond_sumar_bt.setOnClickListener(view -> activitySecond_numparaop_et.setText(sumar(Integer.parseInt(activitySecond_numparaop_et.getText().toString())) + ""));
+        activitySecond_restar_bt.setOnClickListener(view -> activitySecond_numparaop_et.setText(restar(Integer.parseInt(activitySecond_numparaop_et.getText().toString())) + ""));
+        activitySecond_resetear_bt.setOnClickListener(view -> activitySecond_numparaop_et.setText("0"));
+        activitySecond_ocultar_bt.setOnClickListener(view -> {
+            activitySecond_gatitoIMG.setVisibility(View.INVISIBLE);
+            activitySecond_numparaop_et.setVisibility(View.INVISIBLE);
         });
-        activitySecond_restar_bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                activitySecond_numparaop_et.setText(String.valueOf(restar(Integer.parseInt(activitySecond_numparaop_et.getText().toString())) + ""));
-            }
+        activitySecond_zoomNegativo_bt.setOnClickListener(view -> {
+            activitySecond_gatitoIMG.setScaleX((activitySecond_gatitoIMG.getScaleX() - 0.1f));
+            activitySecond_gatitoIMG.setScaleY((activitySecond_gatitoIMG.getScaleY() - 0.1f));
+            activitySecond_numparaop_et.setScaleX((activitySecond_numparaop_et.getScaleX() - 0.1f));
+            activitySecond_numparaop_et.setScaleY((activitySecond_numparaop_et.getScaleY() - 0.1f));
+            activitySecond_sumar_bt.setScaleX((activitySecond_sumar_bt.getScaleX() - 0.1f));
+            activitySecond_sumar_bt.setScaleY((activitySecond_sumar_bt.getScaleY() - 0.1f));
+            activitySecond_restar_bt.setScaleX((activitySecond_restar_bt.getScaleX() - 0.1f));
+            activitySecond_restar_bt.setScaleY((activitySecond_restar_bt.getScaleY() - 0.1f));
+            activitySecond_zoomPositivo_bt.setScaleX((activitySecond_zoomPositivo_bt.getScaleX() - 0.1f));
+            activitySecond_zoomPositivo_bt.setScaleY((activitySecond_zoomPositivo_bt.getScaleY() - 0.1f));
+            activitySecond_zoomNegativo_bt.setScaleX((activitySecond_zoomNegativo_bt.getScaleX() - 0.1f));
+            activitySecond_zoomNegativo_bt.setScaleY((activitySecond_zoomNegativo_bt.getScaleY() - 0.1f));
+            activitySecond_resetear_bt.setScaleX((activitySecond_resetear_bt.getScaleX() - 0.1f));
+            activitySecond_resetear_bt.setScaleY((activitySecond_resetear_bt.getScaleY() - 0.1f));
+            activitySecond_ocultar_bt.setScaleX((activitySecond_ocultar_bt.getScaleX() - 0.1f));
+            activitySecond_ocultar_bt.setScaleY((activitySecond_ocultar_bt.getScaleY() - 0.1f));
         });
-        activitySecond_resetear_bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                activitySecond_numparaop_et.setText("0");
-            }
-        });
-        activitySecond_ocultar_bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                activitySecond_gatitoIMG.setVisibility(View.INVISIBLE);
-                activitySecond_numparaop_et.setVisibility(View.INVISIBLE);
-            }
-        });
-        activitySecond_zoomNegativo_bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                activitySecond_gatitoIMG.setScaleX((activitySecond_gatitoIMG.getScaleX() - 0.1f));
-                activitySecond_gatitoIMG.setScaleY((activitySecond_gatitoIMG.getScaleY() - 0.1f));
-                activitySecond_numparaop_et.setScaleX((activitySecond_numparaop_et.getScaleX() - 0.1f));
-                activitySecond_numparaop_et.setScaleY((activitySecond_numparaop_et.getScaleY() - 0.1f));
-                activitySecond_sumar_bt.setScaleX((activitySecond_sumar_bt.getScaleX() - 0.1f));
-                activitySecond_sumar_bt.setScaleY((activitySecond_sumar_bt.getScaleY() - 0.1f));
-                activitySecond_restar_bt.setScaleX((activitySecond_restar_bt.getScaleX() - 0.1f));
-                activitySecond_restar_bt.setScaleY((activitySecond_restar_bt.getScaleY() - 0.1f));
-                activitySecond_zoomPositivo_bt.setScaleX((activitySecond_zoomPositivo_bt.getScaleX() - 0.1f));
-                activitySecond_zoomPositivo_bt.setScaleY((activitySecond_zoomPositivo_bt.getScaleY() - 0.1f));
-                activitySecond_zoomNegativo_bt.setScaleX((activitySecond_zoomNegativo_bt.getScaleX() - 0.1f));
-                activitySecond_zoomNegativo_bt.setScaleY((activitySecond_zoomNegativo_bt.getScaleY() - 0.1f));
-                activitySecond_resetear_bt.setScaleX((activitySecond_resetear_bt.getScaleX() - 0.1f));
-                activitySecond_resetear_bt.setScaleY((activitySecond_resetear_bt.getScaleY() - 0.1f));
-                activitySecond_ocultar_bt.setScaleX((activitySecond_ocultar_bt.getScaleX() - 0.1f));
-                activitySecond_ocultar_bt.setScaleY((activitySecond_ocultar_bt.getScaleY() - 0.1f));
-            }
-        });
-        activitySecond_zoomPositivo_bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                activitySecond_gatitoIMG.setScaleX((activitySecond_gatitoIMG.getScaleX() + 0.1f));
-                activitySecond_gatitoIMG.setScaleY((activitySecond_gatitoIMG.getScaleY() + 0.1f));
-                activitySecond_numparaop_et.setScaleX((activitySecond_numparaop_et.getScaleX() + 0.1f));
-                activitySecond_numparaop_et.setScaleY((activitySecond_numparaop_et.getScaleY() + 0.1f));
-                activitySecond_sumar_bt.setScaleX((activitySecond_sumar_bt.getScaleX() + 0.1f));
-                activitySecond_sumar_bt.setScaleY((activitySecond_sumar_bt.getScaleY() + 0.1f));
-                activitySecond_restar_bt.setScaleX((activitySecond_restar_bt.getScaleX() + 0.1f));
-                activitySecond_restar_bt.setScaleY((activitySecond_restar_bt.getScaleY() + 0.1f));
-                activitySecond_zoomPositivo_bt.setScaleX((activitySecond_zoomPositivo_bt.getScaleX() + 0.1f));
-                activitySecond_zoomPositivo_bt.setScaleY((activitySecond_zoomPositivo_bt.getScaleY() + 0.1f));
-                activitySecond_zoomNegativo_bt.setScaleX((activitySecond_zoomNegativo_bt.getScaleX() + 0.1f));
-                activitySecond_zoomNegativo_bt.setScaleY((activitySecond_zoomNegativo_bt.getScaleY() + 0.1f));
-                activitySecond_resetear_bt.setScaleX((activitySecond_resetear_bt.getScaleX() + 0.1f));
-                activitySecond_resetear_bt.setScaleY((activitySecond_resetear_bt.getScaleY() + 0.1f));
-                activitySecond_ocultar_bt.setScaleX((activitySecond_ocultar_bt.getScaleX() + 0.1f));
-                activitySecond_ocultar_bt.setScaleY((activitySecond_ocultar_bt.getScaleY() + 0.1f));
-            }
+        activitySecond_zoomPositivo_bt.setOnClickListener(view -> {
+            activitySecond_gatitoIMG.setScaleX((activitySecond_gatitoIMG.getScaleX() + 0.1f));
+            activitySecond_gatitoIMG.setScaleY((activitySecond_gatitoIMG.getScaleY() + 0.1f));
+            activitySecond_numparaop_et.setScaleX((activitySecond_numparaop_et.getScaleX() + 0.1f));
+            activitySecond_numparaop_et.setScaleY((activitySecond_numparaop_et.getScaleY() + 0.1f));
+            activitySecond_sumar_bt.setScaleX((activitySecond_sumar_bt.getScaleX() + 0.1f));
+            activitySecond_sumar_bt.setScaleY((activitySecond_sumar_bt.getScaleY() + 0.1f));
+            activitySecond_restar_bt.setScaleX((activitySecond_restar_bt.getScaleX() + 0.1f));
+            activitySecond_restar_bt.setScaleY((activitySecond_restar_bt.getScaleY() + 0.1f));
+            activitySecond_zoomPositivo_bt.setScaleX((activitySecond_zoomPositivo_bt.getScaleX() + 0.1f));
+            activitySecond_zoomPositivo_bt.setScaleY((activitySecond_zoomPositivo_bt.getScaleY() + 0.1f));
+            activitySecond_zoomNegativo_bt.setScaleX((activitySecond_zoomNegativo_bt.getScaleX() + 0.1f));
+            activitySecond_zoomNegativo_bt.setScaleY((activitySecond_zoomNegativo_bt.getScaleY() + 0.1f));
+            activitySecond_resetear_bt.setScaleX((activitySecond_resetear_bt.getScaleX() + 0.1f));
+            activitySecond_resetear_bt.setScaleY((activitySecond_resetear_bt.getScaleY() + 0.1f));
+            activitySecond_ocultar_bt.setScaleX((activitySecond_ocultar_bt.getScaleX() + 0.1f));
+            activitySecond_ocultar_bt.setScaleY((activitySecond_ocultar_bt.getScaleY() + 0.1f));
         });
     }
     public int sumar (int a){

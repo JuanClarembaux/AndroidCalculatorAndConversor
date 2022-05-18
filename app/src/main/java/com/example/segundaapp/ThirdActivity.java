@@ -1,14 +1,13 @@
 package com.example.segundaapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class ThirdActivity extends AppCompatActivity {
 
@@ -32,27 +31,22 @@ public class ThirdActivity extends AppCompatActivity {
         this.findViews();
     }
 
+    @SuppressLint("SetTextI18n")
     private void findViews(){
-        activityThird_convertir_bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (activityThird_dolar_rbt.isChecked() == true){
-                    activityThird_resultadoMonto_tv.setText(convertirEnDolar(Double.parseDouble(activityThird_ingreseMonto_et.getText().toString())) + "");
-                }
-                if (activityThird_real_rbt.isChecked() == true){
-                    activityThird_resultadoMonto_tv.setText(convertirEnReal(Double.parseDouble(activityThird_ingreseMonto_et.getText().toString())) + "");
-                }
-                if (activityThird_euro_rbt.isChecked() == true){
-                    activityThird_resultadoMonto_tv.setText(convertirEnEuro(Double.parseDouble(activityThird_ingreseMonto_et.getText().toString())) + "");
-                }
+        activityThird_convertir_bt.setOnClickListener(view -> {
+            if (activityThird_dolar_rbt.isChecked()){
+                activityThird_resultadoMonto_tv.setText(convertirEnDolar(Double.parseDouble(activityThird_ingreseMonto_et.getText().toString())) + "");
+            }
+            if (activityThird_real_rbt.isChecked()){
+                activityThird_resultadoMonto_tv.setText(convertirEnReal(Double.parseDouble(activityThird_ingreseMonto_et.getText().toString())) + "");
+            }
+            if (activityThird_euro_rbt.isChecked()){
+                activityThird_resultadoMonto_tv.setText(convertirEnEuro(Double.parseDouble(activityThird_ingreseMonto_et.getText().toString())) + "");
             }
         });
-        activityThird_reiniciar_bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                activityThird_ingreseMonto_et.setText("");
-                activityThird_resultadoMonto_tv.setText("");
-            }
+        activityThird_reiniciar_bt.setOnClickListener(view -> {
+            activityThird_ingreseMonto_et.setText("");
+            activityThird_resultadoMonto_tv.setText("");
         });
     }
     public double convertirEnDolar(double a){
