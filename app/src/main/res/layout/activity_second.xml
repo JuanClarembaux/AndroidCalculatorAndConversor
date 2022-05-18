@@ -13,50 +13,53 @@
         app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
         app:layout_constraintTop_toTopOf="@+id/guiaSuperior"
         android:layout_marginTop="40dp"
-        android:id="@+id/gatitoIMG"
+        android:id="@+id/activitySecond_gatitoIMG"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_gravity="center"
-        android:src="@drawable/gatito_img" />
+        android:src="@drawable/gatito_img"
+        tools:ignore="ContentDescription" />
 
     <EditText
-        app:layout_constraintEnd_toEndOf="@+id/gatitoIMG"
-        app:layout_constraintStart_toStartOf="@+id/gatitoIMG"
-        app:layout_constraintTop_toBottomOf="@+id/gatitoIMG"
+        app:layout_constraintEnd_toEndOf="@+id/activitySecond_gatitoIMG"
+        app:layout_constraintStart_toStartOf="@+id/activitySecond_gatitoIMG"
+        app:layout_constraintTop_toBottomOf="@+id/activitySecond_gatitoIMG"
+        android:id="@+id/activitySecond_numparaop_et"
         android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:inputType="number"
         android:minWidth="48dp"
-        android:text="O"
+        android:text="0"
         android:textAlignment="center"
         android:textSize="36sp"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:background="@color/white"/>
+        tools:ignore="HardcodedText,LabelFor,SpeakableTextPresentCheck"
+        android:background="@color/white"
+        android:importantForAutofill="no" />
 
 
     <Button
-        android:id="@+id/sumar_bt"
+        android:id="@+id/activitySecond_sumar_bt"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/sumar_bt"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/zoomPositivo_bt"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/activitySecond_zoomPositivo_bt"
         app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
         android:layout_marginBottom="25dp"
         android:layout_marginEnd="7dp"
         />
 
     <Button
-        android:id="@+id/restar_bt"
+        android:id="@+id/activitySecond_restar_bt"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/restar_bt"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/zoomNegativo_bt"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/activitySecond_zoomNegativo_bt"
         app:layout_constraintEnd_toStartOf="@+id/guiaDerecha"
         android:layout_marginBottom="25dp"
         android:layout_marginEnd="7dp"
@@ -64,38 +67,38 @@
 
 
     <Button
-        android:id="@+id/zoomPositivo_bt"
+        android:id="@+id/activitySecond_zoomPositivo_bt"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/zoomPositivo_bt"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/resetear_bt"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/activitySecond_resetear_bt"
         app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
         android:layout_marginBottom="25dp"
         android:layout_marginEnd="7dp"
         />
 
     <Button
-        android:id="@+id/zoomNegativo_bt"
+        android:id="@+id/activitySecond_zoomNegativo_bt"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/zoomNegativo_bt"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/ocultar_bt"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/activitySecond_ocultar_bt"
         app:layout_constraintEnd_toStartOf="@+id/guiaDerecha"
         android:layout_marginBottom="25dp"
         android:layout_marginEnd="7dp"
         />
 
     <Button
-        android:id="@+id/resetear_bt"
+        android:id="@+id/activitySecond_resetear_bt"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/resetear_bt"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/guiaInferior"
         app:layout_constraintStart_toStartOf="@+id/guiaIzquierda"
         android:layout_marginBottom="40dp"
@@ -107,12 +110,12 @@
         app:layout_constraintEnd_toStartOf="@+id/guiaDerecha"
         android:layout_marginBottom="40dp"
         android:layout_marginEnd="7dp"
-        android:id="@+id/ocultar_bt"
+        android:id="@+id/activitySecond_ocultar_bt"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/ocultar_bt"
-        android:textSize="18dp"
+        android:textSize="18sp"
         />
 
         <androidx.constraintlayout.widget.Guideline
