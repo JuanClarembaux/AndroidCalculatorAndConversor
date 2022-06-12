@@ -19,4 +19,9 @@
     <string name="dolar_eeuu_Text">Dollar (États-Unis)</string>
     <string name="sumaActivity_bt">Écran de somme</string>
     <string name="ConversorActivity_bt">Convertisseur de devises</string>
+    <string name="telefono_bt">Téléphoner</string>
+    <string name="gmail_bt">Gmail</string>
+    <string name="github_bt">Github</string>
+    <string name="sobre_nosotros">À propos de nous</string>
+    <string name="ContactActivity_bt">Contacts</string>
 </resources>

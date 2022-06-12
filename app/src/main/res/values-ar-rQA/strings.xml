@@ -19,4 +19,9 @@
     <string name="dolar_eeuu_Text">دولار (الولايات المتحدة الأمريكية)</string>
     <string name="sumaActivity_bt">شاشة المجموع</string>
     <string name="ConversorActivity_bt">محول العملات</string>
+    <string name="telefono_bt">هاتف</string>
+    <string name="gmail_bt">Gmail</string>
+    <string name="github_bt">جيثب</string>
+    <string name="sobre_nosotros">معلومات عنا</string>
+    <string name="ContactActivity_bt">جهات الاتصال</string>
 </resources>

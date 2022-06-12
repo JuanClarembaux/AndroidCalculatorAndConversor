@@ -21,4 +21,9 @@
     <string name="imagengatito" translatable="false">imagenGatito</string>
     <string name="sumaActivity_bt">Pantalla de suma</string>
     <string name="ConversorActivity_bt">Conversor de monedas</string>
+    <string name="sobre_nosotros">Sobre Nosotros</string>
+    <string name="telefono_bt">Telefono</string>
+    <string name="gmail_bt">Gmail</string>
+    <string name="github_bt">Github</string>
+    <string name="ContactActivity_bt">Contactos</string>
 </resources>
