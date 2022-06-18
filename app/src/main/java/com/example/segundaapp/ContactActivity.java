@@ -14,7 +14,7 @@ public class ContactActivity extends AppCompatActivity {
     private Button TelefonoButton;
     private Button GmailButton;
     private Button GithubButton;
-    private String mail = "juanclarembaux12@gmail.com";
+    private String[] mails = {"juanclarembaux12@gmail.com"};
     private int phoneNumber = 123456789;
 
     @Override
@@ -35,7 +35,7 @@ public class ContactActivity extends AppCompatActivity {
         GmailButton.setOnClickListener(view -> {
             Intent intent = new Intent(Intent.ACTION_SENDTO);
             intent.setData(Uri.parse("mailto:"));
-            intent.putExtra(Intent.EXTRA_EMAIL, mail);
+            intent.putExtra(Intent.EXTRA_EMAIL, mails);
             if (intent.resolveActivity(getPackageManager()) != null) {
                 startActivity(intent);
             }
